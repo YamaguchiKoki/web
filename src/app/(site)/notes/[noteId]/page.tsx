@@ -9,7 +9,7 @@ export default async function Page({ params }: Props) {
   // これを渡しててデータ取得
 
   return (
-    <section className="flex flex-col w-full">
+    <section className="flex flex-col w-full items-center">
       <Editor />
     </section>
   )

@@ -20,6 +20,7 @@
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
     "@tiptap/pm": "^2.3.1",
     "@tiptap/react": "^2.3.1",
     "@tiptap/starter-kit": "^2.3.1",

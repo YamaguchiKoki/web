@@ -8,6 +8,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { BsCommand } from "react-icons/bs";
 import SideMenu from "@/components/layouts/sideMenu";
+import SpDrawerMenuContent from "@/components/elements/spDrawerMenuContent";
 
 export function SpHeader() {
   return (
@@ -27,8 +28,8 @@ export function SpHeader() {
                 <div className="flex justify-center items-center">Koki Yamaguchi</div>
               </div>
             </DrawerHeader>
-            <div className="flex flex-col gap-y-2 bg-white h-full w-full p-2 px-4">
-              <SideMenu />
+            <div className="w-full p-2 px-4">
+              <SpDrawerMenuContent />
             </div>
           </div>
         </DrawerContent>

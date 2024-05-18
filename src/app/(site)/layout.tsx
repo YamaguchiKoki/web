@@ -10,10 +10,10 @@ interface Props {
 export default function SiteLayout({ children }: Props) {
   return (
     <div className='flex flex-col min-h-screen'>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Header />
       </div>
-      <div className='md:hidden'>
+      <div className='lg:hidden'>
         <SpHeader />
       </div>
       <div className='flex flex-1'>

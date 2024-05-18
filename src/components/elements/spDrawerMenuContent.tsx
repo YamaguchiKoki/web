@@ -12,11 +12,11 @@ import SideMenuItem from '../elements/sideMenuItem'
 import { PlayListCreateModalContainer } from '@/components/elements/modalContainers/playListCreateModalContainer'
 import { Button } from '@/components/ui/button'
 
-interface SideMenuProps {
+interface Props {
   children?: React.ReactNode
 }
 
-const SideMenu: React.FC<SideMenuProps> = ({ children }) => {
+const SpDrawerMenuContent: React.FC<Props> = ({ children }) => {
   const pathname = usePathname()
 
   const routes = useMemo(
@@ -56,14 +56,11 @@ const SideMenu: React.FC<SideMenuProps> = ({ children }) => {
   )
 
   return (
-    <aside className="hidden lg:flex sticky w-[300px] flex-col bg-zinc-50">
+    <aside className="flex flex-col bg-white">
       {routes.map((item) => (
         <SideMenuItem key={item.label} {...item} />
       ))}
-      <PlayListCreateModalContainer>
-        <span>post</span>
-      </PlayListCreateModalContainer>
     </aside>
   )
 }
-export default SideMenu
+export default SpDrawerMenuContent

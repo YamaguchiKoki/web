@@ -1,0 +1,20 @@
+@keyframes revealEffect {
+  0% {
+    filter: brightness(1) blur(15px);
+    opacity: 0;
+    transform: scale(1.0125);
+  }
+  10% {
+    filter: brightness(1.25) blur(10px);
+    opacity: 1;
+  }
+  100% {
+    filter: brightness(1) blur(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal {
+  animation: revealEffect 0.7s ease-in-out;
+}

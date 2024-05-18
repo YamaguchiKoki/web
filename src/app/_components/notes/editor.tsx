@@ -31,7 +31,7 @@ export function Editor() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex-col justify-center items-center w-1/3">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex-col justify-center items-center px-10 w-2/3 lg:w-1/3">
       <div className=" mt-10 mx-auto border-zinc-300 border">
         <ToolMenu editor={editor} />
         <div className="p-3 overflow-y-scroll overflow-hidden mt-3">

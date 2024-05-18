@@ -343,7 +343,7 @@ const notes = [
 
 export function NoteContainer() {
   return (
-    <section className="w-[400px]">
+    <section className="w-full hidden lg:block lg:w-[400px]">
       <div className="top-[50px] border-b bg-zinc-50 px-5">
         <div className="flex items-center justify-between">
           <span className="text-sm font-semibold tracking-tight">Notes</span>
