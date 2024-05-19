@@ -1,4 +1,4 @@
-import { Editor } from "@/app/_components/notes/editor";
+import { Editor } from "@/features/notes/components/editor";
 
 interface Props {
   params: { noteId: string };

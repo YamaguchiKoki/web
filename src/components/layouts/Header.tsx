@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -8,9 +9,11 @@ export function Header() {
         <Button variant="secondary">
           ログイン
         </Button>
-        <Button>
-          新規登録
-        </Button>
+        <Link href='/signup'>
+          <Button>
+              新規登録
+          </Button>
+        </Link>
       </div>
     </header>
   )

@@ -1,4 +1,4 @@
-import { NoteItem } from "@/app/_components/notes/noteItem";
+import { NoteItem } from "@/features/notes/noteItem";
 import { NoteCreateModalContainer } from "@/components/elements/modalContainers/noteCreateModalContainer";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -348,7 +348,7 @@ export function NoteContainer() {
         <div className="flex items-center justify-between">
           <span className="text-sm font-semibold tracking-tight">Notes</span>
           <NoteCreateModalContainer>
-              新規作成
+            新規作成
           </NoteCreateModalContainer>
         </div>
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { useForm } from "react-hook-form";
-import { ToolMenu } from "@/app/_components/notes/toolMenu";
+import { ToolMenu } from "@/features/notes/toolMenu";
 import { Button } from "@/components/ui/button";
 
 export function Editor() {
@@ -24,7 +24,7 @@ export function Editor() {
     },
   });
 
-  if(!editor) return null;
+  if (!editor) return null;
 
   const onSubmit = (data: any) => {
     console.log(data);

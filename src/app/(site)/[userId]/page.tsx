@@ -8,7 +8,7 @@ import { SiApplemusic } from "react-icons/si";
 import { FaBandcamp } from "react-icons/fa";
 import { ImSoundcloud2 } from "react-icons/im";
 import { BsTwitterX } from "react-icons/bs";
-import { PlayListCardContainer } from "@/app/_components/profile/playListCardContainer";
+import { PlayListCardContainer } from "@/features/profile/components/playListCardContainer";
 
 interface Props {
   params: { userId: string };

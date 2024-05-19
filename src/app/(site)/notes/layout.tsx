@@ -1,4 +1,4 @@
-import { NoteContainer } from "@/app/_components/notes/noteContainer";
+import { NoteContainer } from "@/features/notes/components/noteContainer";
 import type React from "react";
 
 interface Props {
@@ -8,7 +8,7 @@ export default function NotesLayout({ children }: Props) {
   return (
     <div className="flex">
       <NoteContainer />
-      { children }
+      {children}
     </div>
   )
 }
