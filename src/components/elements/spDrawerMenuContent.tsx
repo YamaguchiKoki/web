@@ -9,8 +9,6 @@ import { FaRegHeart } from 'react-icons/fa'
 import { HiHome } from 'react-icons/hi'
 import { MdTimeline } from 'react-icons/md'
 import SideMenuItem from '../elements/sideMenuItem'
-import { PlayListCreateModalContainer } from '@/components/elements/modalContainers/playListCreateModalContainer'
-import { Button } from '@/components/ui/button'
 
 interface Props {
   children?: React.ReactNode

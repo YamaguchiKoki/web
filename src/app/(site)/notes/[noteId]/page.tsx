@@ -1,11 +1,11 @@
-import { Editor } from "@/app/_components/notes/editor";
+import { Editor } from '@/features/notes/components/editor'
 
 interface Props {
-  params: { noteId: string };
+  params: { noteId: string }
 }
 export default async function Page({ params }: Props) {
-  const noteId = params.noteId;
-  console.log(noteId);
+  const noteId = params.noteId
+  console.log(noteId)
   // これを渡しててデータ取得
 
   return (

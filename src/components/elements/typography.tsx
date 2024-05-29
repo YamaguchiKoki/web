@@ -1,26 +1,26 @@
-import styles from "@/styles/typography.module.css";
+import styles from '@/styles/typography.module.css'
 
-import { type ComponentPropsWithRef, createElement } from "react";
-import clsx from "clsx";
+import clsx from 'clsx'
+import { createElement, type ComponentPropsWithRef } from 'react'
 
-type Size = "xsmall" | "small" | "medium" | "large" | "x-large";
-type Tag = "p" | "span" | "li";
+type Size = 'xsmall' | 'small' | 'medium' | 'large' | 'x-large'
+type Tag = 'p' | 'span' | 'li'
 type Props<T extends Tag> = {
-  tag?: T;
-  size?: Size;
-  bold?: boolean;
-} & ComponentPropsWithRef<T>;
+  tag?: T
+  size?: Size
+  bold?: boolean
+} & ComponentPropsWithRef<T>
 
 export function Typography<T extends Tag>({
   tag,
   className,
   children,
-  size = "medium",
+  size = 'medium',
   bold,
   ...props
 }: Props<T>) {
   return createElement(
-    tag || "p",
+    tag || 'p',
     {
       className: clsx(
         styles.typography,
@@ -31,5 +31,5 @@ export function Typography<T extends Tag>({
       ...props,
     },
     children,
-  );
+  )
 }

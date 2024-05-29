@@ -1,7 +1,6 @@
 import { Header } from '@/components/layouts/header'
 import SideMenu from '@/components/layouts/sideMenu'
 import { SpHeader } from '@/components/layouts/spHeader'
-import { Switcher } from '@/components/layouts/switcher'
 
 interface Props {
   children: React.ReactNode
@@ -9,18 +8,16 @@ interface Props {
 
 export default function SiteLayout({ children }: Props) {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className="flex flex-col min-h-screen">
       <div className="hidden lg:block">
         <Header />
       </div>
-      <div className='lg:hidden'>
+      <div className="lg:hidden">
         <SpHeader />
       </div>
-      <div className='flex flex-1'>
+      <div className="flex flex-1">
         <SideMenu />
-        <main className='flex-1'>
-          { children }
-        </main>
+        <main className="flex-1">{children}</main>
       </div>
     </div>
   )

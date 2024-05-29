@@ -1,12 +1,12 @@
-import type { Editor } from '@tiptap/react';
+import type { Editor } from '@tiptap/react'
 import {
   MdFormatBold,
   MdFormatStrikethrough,
   MdRedo,
   MdUndo,
-} from 'react-icons/md';
+} from 'react-icons/md'
 
-export function ToolMenu ({ editor }: { editor: Editor }) {
+export function ToolMenu({ editor }: { editor: Editor }) {
   if (!editor) {
     return null
   }
@@ -27,19 +27,12 @@ export function ToolMenu ({ editor }: { editor: Editor }) {
       >
         <MdFormatStrikethrough />
       </button>
-      <button
-        onClick={() => editor.chain().focus().undo().run()}
-        type="button"
-      >
+      <button onClick={() => editor.chain().focus().undo().run()} type="button">
         <MdUndo />
       </button>
-      <button
-        onClick={() => editor.chain().focus().redo().run()}
-        type="button"
-      >
+      <button onClick={() => editor.chain().focus().redo().run()} type="button">
         <MdRedo />
       </button>
     </div>
   )
 }
-

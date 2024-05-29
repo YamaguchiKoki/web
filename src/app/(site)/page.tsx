@@ -1,6 +1,6 @@
-import { CarouselItemCard } from "@/components/elements/cards/carouselItemCard";
-import { PlayListCard } from "@/components/elements/cards/playListCard";
-import { CarouselContainer } from "@/components/layouts/carouselContainer";
+import { CarouselItemCard } from '@/components/elements/cards/carouselItemCard'
+import { PlayListCard } from '@/components/elements/cards/playListCard'
+import { CarouselContainer } from '@/components/layouts/carouselContainer'
 
 export default function Page() {
   return (

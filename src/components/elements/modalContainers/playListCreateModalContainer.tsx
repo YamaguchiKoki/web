@@ -1,18 +1,18 @@
-"use client"
+'use client'
 
-import { PlayListCreateForm } from "@/components/elements/forms/playListCreateForm";
-import { ModalContainer } from "@/components/elements/modalContainers/modalContainer";
-import { PlayListCreateModal } from "@/components/elements/modals/playlistCreateModal";
-import type { ReactNode } from "react"
+import { PlayListCreateForm } from '@/components/elements/forms/playListCreateForm'
+import { ModalContainer } from '@/components/elements/modalContainers/modalContainer'
+import { PlayListCreateModal } from '@/components/elements/modals/playlistCreateModal'
+import type { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode,
-  toggleClassName?: string;
+  children: ReactNode
+  toggleClassName?: string
 }
 
 export function PlayListCreateModalContainer({
   children,
-  toggleClassName
+  toggleClassName,
 }: Props) {
   return (
     <ModalContainer
