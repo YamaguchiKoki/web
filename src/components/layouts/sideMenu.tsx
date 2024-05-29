@@ -3,14 +3,13 @@
 import { usePathname } from 'next/navigation'
 import { useMemo } from 'react'
 
+import { PlayListCreateModalContainer } from '@/components/elements/modalContainers/playListCreateModalContainer'
 import { BiSearch } from 'react-icons/bi'
 import { CgProfile } from 'react-icons/cg'
 import { FaRegHeart } from 'react-icons/fa'
 import { HiHome } from 'react-icons/hi'
 import { MdTimeline } from 'react-icons/md'
 import SideMenuItem from '../elements/sideMenuItem'
-import { PlayListCreateModalContainer } from '@/components/elements/modalContainers/playListCreateModalContainer'
-import { Button } from '@/components/ui/button'
 
 interface SideMenuProps {
   children?: React.ReactNode

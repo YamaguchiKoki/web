@@ -1,4 +1,4 @@
-import { CarouselItem } from "@/components/ui/carousel";
+import { CarouselItem } from '@/components/ui/carousel'
 
 interface Props {
   children?: React.ReactNode
@@ -6,7 +6,7 @@ interface Props {
 export function CarouselItemCard({ children }: Props) {
   return (
     <CarouselItem className="pl-5 md:basis-1/2 lg:basis-1/5">
-      { children }
+      {children}
     </CarouselItem>
   )
 }

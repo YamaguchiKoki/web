@@ -1,8 +1,8 @@
-import { PlayListCard } from "@/components/elements/cards/playListCard";
-import React from "react"
+import { PlayListCard } from '@/components/elements/cards/playListCard'
+import React from 'react'
 
 interface Props {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 export function PlayListCardContainer() {
   return (

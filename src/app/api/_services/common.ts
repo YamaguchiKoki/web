@@ -13,7 +13,7 @@ export class FetchError extends Error {
 
 export const handleSucceed = async (res: Response) => {
   const data = await res.json()
-  console.log(data);
+  console.log(data)
   if (!res.ok) {
     throw new FetchError(res.statusText, res.status)
   }
