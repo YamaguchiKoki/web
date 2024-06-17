@@ -3,12 +3,12 @@
 import { usePathname } from 'next/navigation'
 import { useMemo } from 'react'
 
-import { PlayListCreateModalContainer } from '@/components/elements/modalContainers/playListCreateModalContainer'
 import { BiSearch } from 'react-icons/bi'
 import { CgProfile } from 'react-icons/cg'
 import { FaRegHeart } from 'react-icons/fa'
 import { HiHome } from 'react-icons/hi'
 import { MdTimeline } from 'react-icons/md'
+import { PiPlaylist } from "react-icons/pi";
 import SideMenuItem from '../elements/sideMenuItem'
 
 interface SideMenuProps {
@@ -25,6 +25,12 @@ const SideMenu: React.FC<SideMenuProps> = ({ children }) => {
         label: 'Home',
         active: pathname === '/',
         href: '/',
+      },
+      {
+        icon: PiPlaylist,
+        label: 'Playlists',
+        active: pathname === '/playlists',
+        href: '/dashboard/playlists',
       },
       {
         icon: MdTimeline,
@@ -55,13 +61,10 @@ const SideMenu: React.FC<SideMenuProps> = ({ children }) => {
   )
 
   return (
-    <aside className="hidden lg:flex sticky w-[300px] flex-col bg-zinc-50">
+    <aside className="sticky hidden h-[90vh] w-[350px] flex-col bg-zinc-50 lg:flex">
       {routes.map((item) => (
         <SideMenuItem key={item.label} {...item} />
       ))}
-      <PlayListCreateModalContainer>
-        <span>post</span>
-      </PlayListCreateModalContainer>
     </aside>
   )
 }

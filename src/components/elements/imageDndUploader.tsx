@@ -1,5 +1,5 @@
-import { getImageElementFromFile } from '@/features/image/getImageElementFromFile'
-import { resizeImage } from '@/features/image/resizeImage'
+import { getImageElementFromFile } from '@/features/playlist/services/getImageElementFromFile'
+import { resizeImage } from '@/features/playlist/services/resizeImage'
 import { clsx } from 'clsx'
 import { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'

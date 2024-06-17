@@ -1,3 +1,4 @@
+import { playlistRouter } from '@/server/routers/playlist'
 import { userRouter } from '@/server/routers/user'
 import { createCallerFactory, procedure, router } from './trpc'
 
@@ -10,6 +11,7 @@ export const appRouter = router({
     return { msg: 'Hello World' }
   }),
   user: userRouter,
+  playlist: playlistRouter,
 })
 
 export type AppRouter = typeof appRouter
