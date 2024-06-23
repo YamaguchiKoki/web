@@ -74,3 +74,6 @@
     @apply bg-background text-foreground;
   }
 }
+.scroll-area-custom {
+  position: initial !important; /* 必要に応じて適切な値を設定 */
+}

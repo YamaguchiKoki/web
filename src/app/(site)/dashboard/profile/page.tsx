@@ -10,25 +10,23 @@ import { ImSoundcloud2 } from 'react-icons/im'
 import { SiApplemusic } from 'react-icons/si'
 
 interface Props {
-  params: { userId: string }
   searchParams: {
     [key: string]: string | string[] | undefined
   }
 }
 
-export default function Page({ params, searchParams }: Props) {
-  const userId = params.userId
+export default function Page({ searchParams }: Props) {
 
   const tabValue = (searchParams.value as string) || 'playList'
   //データ取得 Suspenseも
   return (
-    <section className="flex flex-col justify-center items-center w-full mx-auto">
-      <div className="flex w-3/5 space-x-10">
-        <Avatar className="h-[150px] w-[150px]">
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        <div className="flex flex-col justify-center">
+    <section className="w-full mx-10">
+      <div className="flex">
+        <div className="flex flex-col">
+          <Avatar className="h-[100px] w-[100px]">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
           <Typography bold size="x-large">
             島田紳助
           </Typography>
@@ -38,15 +36,14 @@ export default function Page({ params, searchParams }: Props) {
           </Typography>
           <Typography className="pt-2">Follows 42</Typography>
           <div className="flex space-x-4 pt-3">
-            <BsTwitterX size={25} />
-            <FaSpotify size={25} />
-            <SiApplemusic size={25} />
-            <FaBandcamp size={25} />
-            <ImSoundcloud2 size={25} />
+            <BsTwitterX size={20} />
+            <FaSpotify size={20} />
+            <SiApplemusic size={20} />
+            <FaBandcamp size={20} />
+            <ImSoundcloud2 size={20} />
           </div>
         </div>
-        {/* session.user.id == userIdでフォローボタンと出し分け */}
-        <Button variant="outline">編集</Button>
+        <Button variant="outline" className='mt-5'>編集</Button>
       </div>
 
       <Tabs
@@ -57,8 +54,8 @@ export default function Page({ params, searchParams }: Props) {
           <Link href="?value=playList">
             <TabsTrigger value="playList">playlist</TabsTrigger>
           </Link>
-          <Link href="?value=note">
-            <TabsTrigger value="note">note</TabsTrigger>
+          <Link href="?value=liked">
+            <TabsTrigger value="note">liked</TabsTrigger>
           </Link>
         </TabsList>
         <TabsContent value="playList">

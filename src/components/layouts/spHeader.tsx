@@ -30,7 +30,7 @@ import Link from 'next/link'
 export function SpHeader() {
   const { data: session } = useSession();
   return (
-    <header className="fixed top-0 flex w-full flex-row justify-between border-b border-slate-500 bg-white p-2">
+    <header className="z-99 fixed top-0 flex w-full flex-row justify-between border-b border-slate-500 bg-white p-2">
       <Drawer>
         <DrawerTrigger asChild className="">
           <Button className="">
@@ -58,7 +58,8 @@ export function SpHeader() {
           </div>
         </DrawerContent>
       </Drawer>
-      {session ? (
+      {/* TODO: Drawerに入れる */}
+      {/* {session ? (
         <div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -86,7 +87,7 @@ export function SpHeader() {
           <Button variant="secondary" onClick={() => location.href = '/login'}>ログイン</Button>
           <Button onClick={() => location.href = '/signup'} >新規登録</Button>
         </>
-      )}
+      )} */}
     </header>
   )
 }

@@ -18,7 +18,7 @@ export function PlaylistItem(props: Props) {
         <Link
             href={`/dashboard/playlists/${id}`}
             className={twMerge(
-                `flex flex-col gap-1 transition-colors duration-300 hover:bg-gray-200 rounded-lg p-2 cursor-pointer`,
+                `flex flex-col gap-1 transition-colors duration-300 hover:bg-gray-200 rounded-lg p-1 cursor-pointer`,
                 (pathname == `/dashboard/playlists/${id}`) && 'bg-black text-white hover:bg-black',
             )}
         >

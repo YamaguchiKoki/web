@@ -9,6 +9,8 @@ import { FaRegHeart } from 'react-icons/fa'
 import { HiHome } from 'react-icons/hi'
 import { MdTimeline } from 'react-icons/md'
 import { PiPlaylist } from "react-icons/pi";
+import { GiBookshelf } from "react-icons/gi";
+
 import SideMenuItem from '../elements/sideMenuItem'
 
 interface SideMenuProps {
@@ -23,38 +25,32 @@ const SideMenu: React.FC<SideMenuProps> = ({ children }) => {
       {
         icon: HiHome,
         label: 'Home',
-        active: pathname === '/',
-        href: '/',
+        active: pathname === '/dashboard',
+        href: '/dashboard',
       },
       {
         icon: PiPlaylist,
         label: 'Playlists',
-        active: pathname === '/playlists',
+        active: pathname === '/dashboard/playlists',
         href: '/dashboard/playlists',
-      },
-      {
-        icon: MdTimeline,
-        label: 'Notes',
-        active: pathname === '/notes',
-        href: '/notes',
       },
       {
         icon: FaRegHeart,
         label: 'Liked',
-        active: pathname === '/liked',
-        href: '/liked',
+        active: pathname === '/dashboard/liked',
+        href: '/dashboard/liked',
       },
       {
         icon: BiSearch,
         label: 'Search',
-        active: pathname === '/search',
-        href: '/search',
+        active: pathname === '/dashboard/search',
+        href: '/dashboard/search',
       },
       {
         icon: CgProfile,
         label: 'Profile',
-        active: pathname === '/profile',
-        href: '/profile',
+        active: pathname === '/dashboard/profile',
+        href: '/dashboard/profile',
       },
     ],
     [pathname],

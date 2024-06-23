@@ -45,6 +45,7 @@ function ImageUploader({ onChange }: { onChange: (file: Blob) => void }) {
 }
 
 export function Form() {
+    const router = useRouter();
     enum urlType {
         YouTube = 'YouTube',
         Spotify = 'Spotify',
@@ -120,6 +121,8 @@ export function Form() {
                 if (!res.ok) throw new Error();
                 return res.json();
             });
+            // playlist.idのとこに飛ばす
+            await router.push(``);
 
         } catch (err) {
             console.log(err);
@@ -132,8 +135,6 @@ export function Form() {
     const handleChangeFile = (file: Blob) => {
         setImageData(file)
     }
-
-    const router = useRouter()
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col bg-white px-8">
