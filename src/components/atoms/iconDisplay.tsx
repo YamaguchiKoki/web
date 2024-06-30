@@ -3,26 +3,27 @@ import { FaYoutube, FaSpotify, FaApple, FaBandcamp } from 'react-icons/fa';
 import { ImSoundcloud2 } from 'react-icons/im';
 import { HiOutlineMusicNote } from 'react-icons/hi';
 
-type IconType = 'YouTube' | 'Spotify' | 'SoundCloud' | 'AppleMusic' | 'LineMusic' | 'BandCamp' | string;
+type IconType = 'YouTube' | 'Spotify' | 'SoundCloud' | 'AppleMusic' | 'LineMusic' | 'BandCamp' | 'Twitter' | string;
 
 interface IconDisplayProps {
     type: IconType;
+    size?: number
 }
 
-const IconDisplay: React.FC<IconDisplayProps> = ({ type }) => {
+const IconDisplay: React.FC<IconDisplayProps> = ({ type, size }) => {
     switch (type) {
         case 'YouTube':
-            return <FaYoutube />;
+            return <FaYoutube size={size} />;
         case 'Spotify':
-            return <FaSpotify />;
+            return <FaSpotify size={size} />;
         case 'SoundCloud':
-            return <ImSoundcloud2 />;
+            return <ImSoundcloud2 size={size} />;
         case 'AppleMusic':
-            return <FaApple />;
+            return <FaApple size={size} />;
         case 'LineMusic':
-            return <HiOutlineMusicNote />;
+            return <HiOutlineMusicNote size={size} />;
         case 'BandCamp':
-            return <FaBandcamp />;
+            return <FaBandcamp size={size} />;
         default:
             return null;
     }

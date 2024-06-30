@@ -7,7 +7,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import IconDisplay from "@/features/playlist/components/iconDisplay"
+import IconDisplay from "@/components/atoms/iconDisplay"
 import Link from "next/link"
 
 const songs = [

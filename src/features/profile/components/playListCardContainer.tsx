@@ -1,19 +1,36 @@
 import { PlayListCard } from '@/components/elements/cards/playListCard'
 import React from 'react'
-
-interface Props {
-  children: React.ReactNode
+interface Playlist {
+  id: string;
+  user_id: string;
+  name: string;
+  description: string;
+  image_url: string | null;
+  added_to_bookshelf_count: number;
+  created_at: string;
+  updated_at: string;
+  songs: Song[];
 }
-export function PlayListCardContainer() {
+interface Song {
+  id: number;
+  playlist_id: string;
+  name: string;
+  order: number;
+  url: string;
+  url_type: string;
+  created_at: string;
+  updated_at: string;
+}
+interface Props {
+  playlists: Playlist[]
+}
+export function PlayListCardContainer({ playlists }: Props) {
   return (
-    <section className="grid grid-cols-3 gap-4 h-[500px] overflow-y-scroll fixed z-1">
-      <PlayListCard />
-      <PlayListCard />
-      <PlayListCard />
-      <PlayListCard />
-      <PlayListCard />
-      <PlayListCard />
-      <PlayListCard />
+    <section className="grid grid-cols-3 gap-4">
+      {playlists && playlists.map((playlist, index) => (
+        <PlayListCard key={index} playList={playlist} />
+      ))
+      }
     </section>
   )
 }
